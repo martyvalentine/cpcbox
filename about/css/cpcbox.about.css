@@ -1,0 +1,123 @@
+@font-face {
+	font-family: 'Amstrad CPC';
+	font-style: normal;
+	font-weight: normal;
+	src: url('../fonts/Amstrad CPC.woff') format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/Open Sans.woff') format('woff');
+}
+.bs-header * {
+	font-family: 'Amstrad CPC';
+	background-color: #009;
+	color: #ff0;
+}
+#title {
+	font-size: 56px;
+}
+#subtitle {
+	font-size: 12px;
+}
+body {
+	margin-bottom: 30px;
+	font-family: 'Open Sans', sans-serif;
+}
+a, a:hover, a:focus {
+	color: #03b;
+}
+
+/*
+ * Side navigation
+ *
+ * Scrollspy and affixed enhanced navigation to highlight sections and secondary
+ * sections of docs content.
+ */
+
+/* By default it's not affixed in mobile views, so undo that */
+.bs-sidenav.affix {
+	position: static;
+	top: 0px;
+}
+
+/* First level of nav */
+.bs-sidenav {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding-top:    10px;
+	padding-bottom: 10px;
+	text-shadow: 0 1px 0 #fff;
+	background-color: #ecf2fa;
+	border-radius: 5px;
+}
+
+/* All levels of nav */
+.bs-sidebar .nav > li > a {
+	display: block;
+	color: #5e6e7a;
+	padding: 5px 20px;
+}
+.bs-sidebar .nav > li > a:hover,
+.bs-sidebar .nav > li > a:focus {
+	text-decoration: none;
+	background-color: #d7e4f4;
+	border-right: 1px solid #a9c4e8;
+}
+.bs-sidebar .nav > .active > a,
+.bs-sidebar .nav > .active:hover > a,
+.bs-sidebar .nav > .active:focus > a {
+	font-weight: bold;
+	color: #28487c;
+	background-color: transparent;
+	border-right: 1px solid #28487c;
+}
+
+/* Nav: second level (shown on .active) */
+.bs-sidebar .nav .nav {
+	display: none; /* Hide by default, but at >768px, show it */
+	margin-bottom: 8px;
+}
+.bs-sidebar .nav .nav > li > a {
+	padding-top:    3px;
+	padding-bottom: 3px;
+	padding-left: 30px;
+	font-size: 90%;
+}
+
+/* Show and affix the side nav when space allows it */
+@media (min-width: 992px) {
+	.bs-sidebar .nav > .active > ul {
+		display: block;
+	}
+	/* Widen the fixed sidebar */
+	.bs-sidenav.affix-top,
+	.bs-sidenav.affix,
+	.bs-sidenav.affix-bottom {
+		width: 213px;
+	}
+	.bs-sidenav.affix {
+		position: fixed; /* Undo the static from mobile first approach */
+	}
+	.bs-sidenav.affix-bottom {
+		position: absolute; /* Undo the static from mobile first approach */
+	}
+	.bs-sidenav.affix-bottom .bs-sidenav,
+	.bs-sidenav.affix .bs-sidenav {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+@media (min-width: 1200px) {
+	.bs-sidebar .nav .nav {
+		display: block; /* Hide by default, but at >768px, show it */
+	}
+
+	/* Widen the fixed sidebar again */
+	.bs-sidenav.affix-top,
+	.bs-sidenav.affix,
+	.bs-sidenav.affix-bottom {
+		width: 263px;
+	}
+}
