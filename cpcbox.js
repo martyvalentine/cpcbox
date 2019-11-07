@@ -37,7 +37,7 @@ var oU = {
         "awa" != a && "schneider" != a && "amstrad" != a && (a = "amstrad");
         $($Kyk3LdzJw$kGSuWuqv5(113) + a + "]").attr("checked", !0);
         a = oW("firmware");
-        "english" != a && "french" != a && "spanish" != a && (a = "english");
+        "english" != a && "french" != a && "spanish" != a && (a = "spanish");
         $($Kyk3LdzJw$kGSuWuqv5(105) + a + "]").attr("checked", !0);
         a = oW("monitor");
         "colour" != a && "green" != a && "grayscale" != a && (a = "colour");
@@ -127,8 +127,8 @@ var oU = {
         default:
             alert($Kyk3LdzJw$kGSuWuqv5(103))
         }
-        $($Kyk3LdzJw$kGSuWuqv5(112)).is(":checked") ? (pH.u = !0, $($Kyk3LdzJw$kGSuWuqv5(116)).is(":visible") && $($Kyk3LdzJw$kGSuWuqv5(102)).fadeIn()) : (pH.u = !1, $($Kyk3LdzJw$kGSuWuqv5(102)).fadeOut());
-        $($Kyk3LdzJw$kGSuWuqv5(106)).is(":checked") ? (pI.u = !0, $($Kyk3LdzJw$kGSuWuqv5(116)).is(":visible") && $($Kyk3LdzJw$kGSuWuqv5(117)).fadeIn()) : ($("#tape-stop").click(), pI.u = !1, $($Kyk3LdzJw$kGSuWuqv5(117)).fadeOut());
+        $($Kyk3LdzJw$kGSuWuqv5(112)).is(":checked") ? (pH.u = !0, $($Kyk3LdzJw$kGSuWuqv5(116)).is(":visible") && $($Kyk3LdzJw$kGSuWuqv5(102)).show()) : (pH.u = !1, $($Kyk3LdzJw$kGSuWuqv5(102)).hide());
+        $($Kyk3LdzJw$kGSuWuqv5(106)).is(":checked") ? (pI.u = !0, $($Kyk3LdzJw$kGSuWuqv5(116)).is(":visible") && $($Kyk3LdzJw$kGSuWuqv5(117)).show()) : ($("#tape-stop").click(), pI.u = !1, $($Kyk3LdzJw$kGSuWuqv5(117)).hide());
         $("#ram-option").is(":checked") ? this.p = !0 : this.p = !1;
         this.Q()
     },
@@ -7618,7 +7618,7 @@ var qB, qC, qD, qE, qF, qG, qH = {
             $(this).hasClass("button") && qH.oM()
         });
         $($Kyk3LdzJw$kGSuWuqv5(20)).removeClass($Kyk3LdzJw$kGSuWuqv5(161)).addClass("button");
-        $("#logo").is(":visible") && ($("#logo").fadeOut(), $("#screen").fadeIn());
+        $("#logo").is(":visible") && ($("#logo").hide(), $("#screen").show());
         qB = 0;
         pb();
         qM.innerHTML = "Running";
@@ -7651,7 +7651,7 @@ var qB, qC, qD, qE, qF, qG, qH = {
         if ("none" == a) $("#button-run").val("Pause").unbind().click(function () {
                 $(this).hasClass("button") && qH.oM()
             }),
-            $($Kyk3LdzJw$kGSuWuqv5(20)).removeClass("button").addClass($Kyk3LdzJw$kGSuWuqv5(161)), $($Kyk3LdzJw$kGSuWuqv5(18)).fadeIn(), $("#screen").fadeOut(), qz.clear();
+            $($Kyk3LdzJw$kGSuWuqv5(20)).removeClass("button").addClass($Kyk3LdzJw$kGSuWuqv5(161)), $($Kyk3LdzJw$kGSuWuqv5(18)).show(), $("#screen").hide(), qz.clear();
         else {
             this.aa();
             var b = $Kyk3LdzJw$kGSuWuqv5(116);
@@ -7684,7 +7684,7 @@ var qB, qC, qD, qE, qF, qG, qH = {
                 $($Kyk3LdzJw$kGSuWuqv5(203) + b).show();
                 break;
             default:
-                qG = 3, qM.innerHTML = $Kyk3LdzJw$kGSuWuqv5(15), $($Kyk3LdzJw$kGSuWuqv5(202)).fadeIn()
+                qG = 3, qM.innerHTML = $Kyk3LdzJw$kGSuWuqv5(15), $($Kyk3LdzJw$kGSuWuqv5(202)).show()
             }
             pu.G();
             3 == qG ? pK("snapshots/", a, this.oP) : $($Kyk3LdzJw$kGSuWuqv5(200)).is(":checked") ? launch_debugger() : this.oL()
@@ -7836,13 +7836,13 @@ var qN = {
                 qH.oM();
             $($Kyk3LdzJw$kGSuWuqv5(20)).removeClass("button").addClass($Kyk3LdzJw$kGSuWuqv5(161));
             $("#snapshot").attr("disabled", !0);
-            $($Kyk3LdzJw$kGSuWuqv5(2)).fadeIn()
+            $($Kyk3LdzJw$kGSuWuqv5(2)).show()
         });
         $($Kyk3LdzJw$kGSuWuqv5(217)).click(function () {
             oU.y();
             oU.w();
             $("#snapshot").removeAttr("disabled");
-            $($Kyk3LdzJw$kGSuWuqv5(2)).fadeOut();
+            $($Kyk3LdzJw$kGSuWuqv5(2)).hide();
             "none" != $("#snapshot").val() && qH.oL()
         });
         oU.b && ($($Kyk3LdzJw$kGSuWuqv5(200)).click(function () {
